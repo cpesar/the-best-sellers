@@ -1,0 +1,12 @@
+*{
+    Box-sizing: border-box;
+    Margin: 0;
+    Padding: 0;
+    }
+.page-title {
+    margin: 0;
+}
+
+#search {
+    width: 70%;
+}
