@@ -17,12 +17,11 @@
         <h1 class="center page-title">Travel Boiz!</h1>
         <div class="row">
             <div class="col s3">
-                <div class="weather-container">
-                </div>
             </div>
             <div class="col s9">
                 <form>
                     <div class="input-field">
+
                         <select>
                             <option value=" " disabled selected>Pick Your New Addiction</option>
                             <option value="hardcover-fiction">Hardcover Fiction</option>
@@ -37,8 +36,7 @@
                             <option value="young-adult">Young Adult</option>
                             <option value="recipes">Recipe Books</option>
                         </select>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                        </button>
+
                     </div>
                 </form>
 
@@ -46,82 +44,113 @@
         </div>
 
     </header>
-    <div class="container">
+    <div class="container center">
         <h3 class="center">Welcome!</h3>
-        <img class="responsive-img" src="./assets/images/Landing page image..jpg" alt="">
+        <img class="responsive-img " src="./assets/images/Book landing page photo.jpg" alt="">
         <div class="row">
             <div class="col s12 m4">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./assets/images/Landing page image..jpg">
-                        <span class="card-title">Card Title</span>
+                        <img id="book-img-one" src="">
+                        <span id="book-title-one" class="card-title"></span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <p id="book-desc-one"></p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a id="book-buy-one" href="#">Link to Amazon</a>
                     </div>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./assets/images/Landing page image..jpg">
-                        <span class="card-title">Card Title</span>
+                        <img id="book-img-two" src="">
+                        <span id="book-title-two" class="card-title"></span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <p id="book-desc-two"></p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a id="book-buy-two" href="#">Link to Amazon</a>
                     </div>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./assets/images/Landing page image..jpg">
-                        <span class="card-title">Card Title</span>
+                        <img id="book-img-three" src="">
+                        <span id="book-title-three" class=" card-title"></span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <p id="book-desc-three"></p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a id="book-buy-three" href="#">Link to Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img id="book-img-four" src="">
+                        <span id="book-title-four" class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p id="book-desc-four"></p>
+                    </div>
+                    <div class="card-action">
+                        <a id="book-buy-four" href="#">Link to Amazon</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img id="book-img-five" src="">
+                        <span id="book-title-five" class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p id="book-desc-five"></p>
+                    </div>
+                    <div class="card-action">
+                        <a id="book-buy-five" href="#">Link to Amazon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img id="book-img-six" src="">
+                        <span id="book-title-six" class=" card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p id="book-desc-six"></p>
+                    </div>
+                    <div class="card-action">
+                        <a id="book-buy-six" href="#">Link to Amazon</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+  
+  <!-- Modal: triggers when status text for API is not ok-->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 id="modal-title"></h4>
+      <p>An error occured. Please try again!</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay!</a>
+    </div>
+  </div>
+  
     <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
+        <img src="./assets/images/powered_by_google_on_non_white.png" alt="">
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
