@@ -37,3 +37,9 @@ var getImageData = function (bookData) {
         };
     });
 };
+
+//selector initializer
+$(document).ready(function(){
+    $('select').formSelect();
+  });
+
