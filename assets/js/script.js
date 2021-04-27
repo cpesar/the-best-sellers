@@ -1,10 +1,6 @@
-// Variables for different HTML elements
-var $inputCity = document.getElementById("searchCity"); // Needs id for text area element
-
-
 // To get data for best selling books from NYTimes API 
-var getBookData = function (citySearch) {
-    var apiUrl = "https://api.nytimes.com/svc/books/v3/lists.json?list-name=" + citySearch + "&api-key=2njTMELLnHST5J4DsJ9Jc7ZeVO6TXVMc";
+var getBookData = function(search) {
+    var apiUrl = "https://api.nytimes.com/svc/books/v3/lists.json?list-name=" + search + "&api-key=2njTMELLnHST5J4DsJ9Jc7ZeVO6TXVMc";
 
     // Make fetch request to url for weather data
     fetch(apiUrl).then(function (response) {
@@ -15,7 +11,9 @@ var getBookData = function (citySearch) {
                 getImageData(data)
             });
         } else {
-            console.log("error") // Will need to connect to a modal
+            $("#modal-title").text("Error: " + response.statusText);
+            $(".modal").modal();
+            $("#modal1").modal('open');
         };
     });
 };
@@ -33,7 +31,9 @@ var getImageData = function (bookData) {
                 console.log(data);
             });
         } else {
-            console.log("error") // Will need to connect to a modal
+            $("#modal-title").text("Error: " + response.statusText);
+            $(".modal").modal();
+            $("#modal1").modal('open');
         };
     });
 };
