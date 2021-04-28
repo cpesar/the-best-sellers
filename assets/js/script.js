@@ -1,4 +1,3 @@
-
 // To get data for best selling books from NYTimes API 
 var getBookData = function() {
     var search = document.getElementById("genre-choice").value;
