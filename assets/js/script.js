@@ -22,46 +22,49 @@ var getBookData = function() {
 };
 
 //FOR LOOP FOR AMAZON URL 
-async function addToBookCards(results) {
+function addToBookCards(results) {
     for(var i = 0; i < 6; i++){
         var productUrl = results[i].amazon_product_url;
-        console.log(productUrl);
+        // console.log(productUrl);
 
     document.getElementById('book-buy-' + i).setAttribute('href', productUrl);
 
-    
-    var imageThumbnail = await getImageData(results[0].isbns[0].isbn10);
-    console.log('image thumb: ',imageThumbnail);
-    document.getElementById('book-img-' + i).innerHTML = imageThumbnail;
-    
+    //SET IMAGE DATA, PASS IN TO SET DATA IMAGE SRC ATTRIBUTE
+    setImageData(results[i].isbns[0].isbn10, i);
 
     var bookDetails = results[i].book_details[0].description
     document.getElementById('book-desc-' + i).innerHTML = bookDetails;
-
+    
+ 
 
     //UPDATE CSS OVERFLOW FOR BOOK IMAGE
     var bookTitle = results[i].book_details[0].title
     document.getElementById('book-title-' +i).innerHTML = bookTitle;
     }
-
 }
 
 
 // getBookData("hardcover-fiction");
 // To get images for best selling books from google books
-async function getImageData(bookId) {
-    
+function setImageData(bookId, Index) {
     var apiUrl = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + bookId + "&key=AIzaSyBMxlyBiHn8m2_O63HOvZN-yqn-bAsJmFc";
 
-    await fetch(apiUrl).then(function (response) {
+    fetch(apiUrl).then(function (response) {
         // Request sucessful
         if (response.ok) {
             response.json().then(function (data) {
-                // console.log('data.thumbnail: ',data.items[0].volumeInfo.imageLinks.thumbnail);
-                if(!data.items) {
-                    return 'https://via.placeholder.com/128x180';
+                var imageUrl;
+                //IF DATA.ITEMS IS UNDEFINED, USE PLACEHOLDER IMAGE
+                if(data.items) {
+                    imageUrl = data.items[0].volumeInfo.imageLinks.thumbnail;
+                } else {
+                    imageUrl = 'https://via.placeholder.com/128x180';
                 }
-                return(data.items[0].volumeInfo.imageLinks.thumbnail);
+            
+            //SET IMAGE URL TO SRC ATTRIBUTE BOOK IMAGE(IMAGE PASSED INTO THIS FUNCTION WHEN CALLED)
+                document
+                    .getElementById('book-img-' + index)
+                    .setAttribute('src', imageUrl);
             });
         } else {
             $("#modal-title").text("Error: " + response.statusText);
@@ -70,6 +73,8 @@ async function getImageData(bookId) {
         };
     });
 };
+
+
 
 //selector initializer
 $(document).ready(function(){
