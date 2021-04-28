@@ -1,5 +1,8 @@
+
 // To get data for best selling books from NYTimes API 
-var getBookData = function(search) {
+var getBookData = function() {
+    var search = document.getElementById("genre-choice").value;
+    
     var apiUrl = "https://api.nytimes.com/svc/books/v3/lists.json?list-name=" + search + "&api-key=2njTMELLnHST5J4DsJ9Jc7ZeVO6TXVMc";
 
     // Make fetch request to url for weather data
@@ -9,6 +12,7 @@ var getBookData = function(search) {
             response.json().then(function (data) {
                 console.log(data)
                 getImageData(data)
+                addToBookCards(data.results);
             });
         } else {
             $("#modal-title").text("Error: " + response.statusText);
@@ -17,6 +21,15 @@ var getBookData = function(search) {
         };
     });
 };
+
+function addToBookCards(results) {
+    for(var i = 0; i < 6; i++){
+        var productUrl = results[i].amazon_product_url;
+        console.log(productUrl);
+    }
+}
+
+
 // getBookData("hardcover-fiction");
 
 // To get images for best selling books from google books
