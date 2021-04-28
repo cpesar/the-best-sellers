@@ -38,6 +38,15 @@ var getImageData = function (bookData) {
     });
 };
 
+// To save book data - need data going to cards
+var saveBookData = function() {
+    localStorage.setItem()
+};
+
+// To load book data- need data going to cards first
+var loadBookData = function() {
+    localStorage.getItem
+}
 //selector initializer
 $(document).ready(function(){
     $('select').formSelect();
