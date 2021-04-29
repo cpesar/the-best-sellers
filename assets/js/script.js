@@ -73,6 +73,13 @@ function setImageData(bookId, index) {
     });
 };
 
+// To save book data to localStorage
+var saveBookData = function(title, link) {
+    localStorage.setItem(title, JSON.stringify("Book Title: " + title + "Link: " + link));
+};
+
+//$("#saveBtn").click
+console.log(document.querySelector('#book-title-0').textContent);
 
 
 //selector initializer
