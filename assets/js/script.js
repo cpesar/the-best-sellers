@@ -45,7 +45,7 @@ function addToBookCards(results) {
 
 // getBookData("hardcover-fiction");
 // To get images for best selling books from google books
-function setImageData(bookId, Index) {
+function setImageData(bookId, index) {
     var apiUrl = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + bookId + "&key=AIzaSyBMxlyBiHn8m2_O63HOvZN-yqn-bAsJmFc";
 
     fetch(apiUrl).then(function (response) {
