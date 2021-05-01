@@ -23,7 +23,7 @@
                     <div class="input-field">
 
                         <select id="genre-choice" onchange="getBookData()">
-                            <option value=" " disabled selected>Pick Your New Addiction</option>
+                            <option value=" " disabled selected>Pick The BestsellerList</option>
                             <option value="hardcover-fiction">Hardcover Fiction</option>
                             <option value="hardcover-nonfiction">Hardcover Nonfiction</option>
                             <option value="hardcover-advice">Hardcover Advice</option>
@@ -34,7 +34,7 @@
                             <option value="picture-books">Children's Picture Books</option>
                             <option value="series-books">Children's Series</option>
                             <option value="young-adult">Young Adult</option>
-                            <option value="recipes">Recipe Books</option>
+                            <option value="food-and-fitness">Recipe Books</option>
                         </select>
 
                     </div>
@@ -59,7 +59,8 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-0" href="#">Link to Amazon</a>
-                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-0'))">Save for Later</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-0'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +75,8 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-1" href="#">Link to Amazon</a>
-                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-1'))">Save for Later</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-1'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +91,8 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-2" href="#">Link to Amazon</a>
-                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-2'))">Save for Later</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-2'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +109,8 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-3" href="#">Link to Amazon</a>
-                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-3'))">Save for Later</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-3'))">Save for Later</a>
                     </div>
 
                 </div>
@@ -122,7 +126,8 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-4" href="#">Link to Amazon</a>
-                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-4'))">Save for Later</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-4'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -137,7 +142,8 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-5" href="#">Link to Amazon</a>
-                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-5'))">Save for Later</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-5'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -151,22 +157,22 @@
                 <ul id="saved-book-links">
                     <li></li>
                 </ul>
-                </div>
             </div>
-            <a class="waves-effect waves-light btn" id="remove" onclick="clearSaved()">Unsave All</a>
         </div>
-  
-  <!-- Modal: triggers when status text for API is not ok-->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4 id="modal-title"></h4>
-      <p>An error occured. Please try again!</p>
+        <a class="waves-effect waves-light btn" id="remove" onclick="clearSaved()">Unsave All</a>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay!</a>
+
+    <!-- Modal: triggers when status text for API is not ok-->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4 id="modal-title"></h4>
+            <p>An error occured. Please try again!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay!</a>
+        </div>
     </div>
-  </div>
-  
+
     <footer class="page-footer">
         <img src="./assets/images/powered_by_google_on_non_white.png" alt="">
         <img src="./assets/images/poweredby_nytimes_200c.png" alt="">
