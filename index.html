@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Travel Boiz</title>
+    <title>Book Boiz</title>
 </head>
 
 <body>
@@ -59,6 +59,7 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-0" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-0'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -73,6 +74,7 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-1" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-1'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -87,6 +89,7 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-2" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-2'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -103,6 +106,7 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-3" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-3'))">Save for Later</a>
                     </div>
 
                 </div>
@@ -118,6 +122,7 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-4" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-4'))">Save for Later</a>
                     </div>
                 </div>
             </div>
@@ -132,11 +137,24 @@
                     </div>
                     <div class="card-action">
                         <a id="book-buy-5" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later" onclick="saveForLater(document.getElementById('book-buy-5'))">Save for Later</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="container center">
+        <h4 class="center">Saved Book Links</h4>
+        <div class="row">
+            <div class="center">
+                <ul id="saved-book-links">
+                    <li></li>
+                </ul>
+                </div>
+            </div>
+            <a class="waves-effect waves-light btn" id="remove" onclick="clearSaved()">Unsave All</a>
+        </div>
   
   <!-- Modal: triggers when status text for API is not ok-->
   <div id="modal1" class="modal">
