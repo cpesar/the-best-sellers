@@ -117,5 +117,6 @@ function writeToPage() {
 
 function clearSaved() {
     localStorage.clear()
+    window.top.location = window.top.location
 }
 
