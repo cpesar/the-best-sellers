@@ -1,4 +1,4 @@
-# travel-boiz
+# TheBestSellers
 https://jakelw96.github.io/travel-boiz/
 ![The Bestsellers](https://user-images.githubusercontent.com/59940979/116791143-9d300e80-aa75-11eb-8b94-36c87766a818.PNG)
 
