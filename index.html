@@ -8,26 +8,35 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Travel Boiz</title>
+    <title>TheBestSellers</title>
 </head>
 
 <body>
     <header class="page-footer">
 
-        <h1 class="center page-title">Travel Boiz!</h1>
+        <h1 class="center page-title">TheBestSellers</h1>
         <div class="row">
             <div class="col s3">
-                <div class="weather-container">
-                </div>
             </div>
             <div class="col s9">
                 <form>
                     <div class="input-field">
-                        <input id="search" type="search" class="grey" placeholder="Search for your destination"
-                            required>
-                        <i class="material-icons ">close</i>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                        </button>
+
+                        <select id="genre-choice" onchange="getBookData()">
+                            <option value=" " disabled selected>Pick The Best Seller List</option>
+                            <option value="hardcover-fiction">Hardcover Fiction</option>
+                            <option value="hardcover-nonfiction">Hardcover Nonfiction</option>
+                            <option value="hardcover-advice">Hardcover Advice</option>
+                            <option value="hardcover-graphic-books">Hardcover Graphic Books</option>
+                            <option value="manga">Manga</option>
+                            <option value="chapter-books">Children's Chapter Books</option>
+                            <option value="childrens-middle-grade">Children's Middle Grade</option>
+                            <option value="picture-books">Children's Picture Books</option>
+                            <option value="series-books">Children's Series</option>
+                            <option value="young-adult">Young Adult</option>
+                            <option value="food-and-fitness">Recipe Books</option>
+                        </select>
+
                     </div>
                 </form>
 
@@ -35,82 +44,138 @@
         </div>
 
     </header>
-    <div class="container">
+    <div class="container center">
         <h3 class="center">Welcome!</h3>
-        <img class="responsive-img" src="./assets/images/Landing page image..jpg" alt="">
+        <img class="responsive-img " src="./assets/images/Book landing page photo.jpg" alt="">
         <div class="row">
             <div class="col s12 m4">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./assets/images/Landing page image..jpg">
-                        <span class="card-title">Card Title</span>
+                        <img id="book-img-0" src="">
+                        <span id="book-title-0" class="card-title"></span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <p id="book-desc-0"></p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a id="book-buy-0" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-0'))">Save for Later</a>
                     </div>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./assets/images/Landing page image..jpg">
-                        <span class="card-title">Card Title</span>
+                        <img id="book-img-1" src="">
+                        <span id="book-title-1" class="card-title"></span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <p id="book-desc-1"></p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a id="book-buy-1" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-1'))">Save for Later</a>
                     </div>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="card hoverable">
                     <div class="card-image">
-                        <img src="./assets/images/Landing page image..jpg">
-                        <span class="card-title">Card Title</span>
+                        <img id="book-img-2" src="">
+                        <span id="book-title-2" class=" card-title"></span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                        <p id="book-desc-2"></p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a id="book-buy-2" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-2'))">Save for Later</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img id="book-img-3" src="">
+                        <span id="book-title-3" class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p id="book-desc-3"></p>
+                    </div>
+                    <div class="card-action">
+                        <a id="book-buy-3" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-3'))">Save for Later</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img id="book-img-4" src="">
+                        <span id="book-title-4" class="card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p id="book-desc-4"></p>
+                    </div>
+                    <div class="card-action">
+                        <a id="book-buy-4" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-4'))">Save for Later</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-image">
+                        <img id="book-img-5" src="">
+                        <span id="book-title-5" class=" card-title"></span>
+                    </div>
+                    <div class="card-content">
+                        <p id="book-desc-5"></p>
+                    </div>
+                    <div class="card-action">
+                        <a id="book-buy-5" href="#">Link to Amazon</a>
+                        <a class="waves-effect waves-light btn" id="save-for-later"
+                            onclick="saveForLater(document.getElementById('book-buy-5'))">Save for Later</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="container center">
+        <h4 class="center">Saved Book Links</h4>
+        <div class="row">
+            <div class="center">
+                <ul id="saved-book-links">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <a class="waves-effect waves-light btn" id="remove" onclick="clearSaved()">Unsave All</a>
+    </div>
+
+    <!-- Modal: triggers when status text for API is not ok-->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4 id="modal-title"></h4>
+            <p>An error occured. Please try again!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Okay!</a>
+        </div>
+    </div>
+
     <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
+        <img src="./assets/images/powered_by_google_on_non_white.png" alt="">
+        <img src="./assets/images/poweredby_nytimes_200c.png" alt="">
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

@@ -1,12 +1,21 @@
-*{
-    Box-sizing: border-box;
-    Margin: 0;
-    Padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .page-title {
-    margin: 0;
+  margin: 0;
 }
 
 #search {
-    width: 70%;
+  width: 70%;
+}
+
+.card-title {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.input-field {
+  width: 75%;
 }
